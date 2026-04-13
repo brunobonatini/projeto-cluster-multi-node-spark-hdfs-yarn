@@ -1,0 +1,8 @@
+# Execução de Job com Gerenciamento de Cluster do Spark:
+
+docker exec pyspark-master spark-submit --deploy-mode client ./apps/projeto.py
+
+
+# Execução de Job com Gerenciamento de Cluster via YARN:
+
+docker exec spark-master-yarn spark-submit --master yarn --deploy-mode cluster ./examples/src/main/python/pi.py
