@@ -320,7 +320,6 @@ O script testa automaticamente diferentes combinações de parâmetros:
 
 O modelo é treinado usando os dados de treino:
 
-```python
 modelos = cv.fit(dados_treino)
 
 ## 📓 Notebooks
