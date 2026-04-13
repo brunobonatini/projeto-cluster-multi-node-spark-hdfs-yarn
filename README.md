@@ -170,7 +170,6 @@ cd projeto-cluster-multi-node-spark-hdfs-yarn
 
 docker compose -f docker-compose.yml up -d --scale spark-worker-yarn=3
 
-
 # ✈️ Previsão de Voos com Apache Spark
 
 ## 📌 O que está sendo construído?
