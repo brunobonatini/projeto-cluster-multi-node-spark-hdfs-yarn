@@ -18,6 +18,8 @@ Este projeto implementa um ambiente distribuído para processamento de dados uti
 
 O objetivo é simular um **cluster com múltiplos nós**, permitindo executar pipelines de dados de forma escalável, semelhante a ambientes reais de grandes empresas.
 
+![alt text](cluster_hadoop.png)
+
 ---
 
 ## 🎯 Problema que o projeto resolve
