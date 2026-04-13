@@ -4,8 +4,8 @@
 
 - Criação de um pipeline de limpeza e transformação de dados usando PySpark SQL para treinar a avaliar modelos de Machine Learning no cluster Spark. 
 Os dados serão carregados do ambiente distribuído com HDFS e o resultado do processamento será salvo em formato Parquet.
-Os dados foram gerados com base no dataset disponível no link:https://www.kaggle.com/datasets/iamsouravbanerjee/airline-dataset/data.
-Neste projeto vamos também explorar os conceitos de experimentação e execução no ambiente Spark.
+Os dados foram gerados com base no dataset disponível no link: https://www.kaggle.com/datasets/iamsouravbanerjee/airline-dataset/data.
+
 
 ## 📌 Visão Geral
 
