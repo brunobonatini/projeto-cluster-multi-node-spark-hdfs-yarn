@@ -162,12 +162,11 @@ Contém arquivos de configuração do Hadoop e YARN:
 
 ### 1. Clonar o repositório
 
-```bash
 git clone <repo-url>
+
 cd projeto-cluster-multi-node-spark-hdfs-yarn
 
-
-2. Subir o cluster
+## 2. Subir o cluster
 
 docker compose -f docker-compose.yml up -d --scale spark-worker-yarn=3
 
