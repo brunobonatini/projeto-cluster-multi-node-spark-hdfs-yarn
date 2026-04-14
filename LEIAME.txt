@@ -3,22 +3,27 @@
 # Inicializar o cluster
 docker compose -f docker-compose.yml up -d --scale spark-worker-yarn=3
 
-# Acesse o terminal do container master digite "bash" e navegue até a pasta onde está o Jupyter Notebook.
+# Testar o cluster
+docker exec spark-master-yarn spark-submit --master yarn --deploy-mode cluster ./examples/src/main/python/pi.py
 
-root@0b0c2a97636c:/opt/spark/apps
+# Acesse o terminal do container master digite "bash" e navegue até a pasta onde está o Jupyter Notebook.
+/opt/spark/apps
 
 # Habilite o jupyter notebook para ser utilizado no navegador localhost
-
 jupyter notebook --ip=0.0.0.0 --no-browser --allow-root
 
 # URL para acessar o jupyter
 http://127.0.0.1:8888/tree?token=465a2a6d50ff15d2c195b0645bfc0922c07b7c522b54c64d
 
+# Obs: Encerrar o Jupyter Notebook no terminal do container antes de executar o script para não dar problema de memória no cluster.
+CTRL C
+Yes
+
+# Execução de Job com Gerenciamento de Cluster via YARN:
+docker exec spark-master-yarn spark-submit --master yarn --deploy-mode cluster ./apps/projeto.py
+
 # Visualizar os logs
 docker compose logs
-
-# Testar o cluster
-docker exec spark-master-yarn spark-submit --master yarn --deploy-mode cluster ./examples/src/main/python/pi.py
 
 # Derrubar o cluster
 docker compose down --volumes --remove-orphans
